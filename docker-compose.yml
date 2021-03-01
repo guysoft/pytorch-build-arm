@@ -1,0 +1,11 @@
+pytorch:
+  build: . 
+  # image:  guysoft/pytorch-build-arm
+  restart: always
+  tty: true
+  container_name: pytorch
+  entrypoint: /bin/bash
+  volumes:
+    - ./build.sh:/build.sh
+    # - /media/usb0:/media/usb0
+
